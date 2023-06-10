@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/about_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/about_title"
+        android:layout_marginTop="16dp"
+        android:src="@mipmap/ic_launcher"
+        android:contentDescription="App Logo" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/about_title"
+        android:layout_marginTop="151dp"
+        android:gravity="center"
+        android:text="Eletricity Bill Calculator"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/about_title"
+        android:layout_marginTop="190dp"
+        android:gravity="center"
+        android:text="Version 1.0"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/about_title"
+        android:layout_marginTop="234dp"
+        android:gravity="center"
+        android:text="Developed by Muhammad Syafiq Haikal Bin Mohd Ali"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/website_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/about_title"
+        android:layout_marginTop="408dp"
+        android:autoLink="web"
+        android:gravity="center"
+        android:onClick="openWebsite"
+        android:text="Application on Website"
+        android:textColorLink="@android:color/holo_blue_light"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/copyright_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="©2023 All rights reserved."
+        android:textSize="14sp" />
+
+</RelativeLayout>
