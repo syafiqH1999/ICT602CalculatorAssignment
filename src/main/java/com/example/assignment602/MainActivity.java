@@ -99,12 +99,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
 
                 EditText etRebate = findViewById(R.id.editTextRebate);
+                String rebateValue = etRebate.getText().toString().trim();
                 double rebatePercentage;
 
-                if (etRebate.getText().toString().isEmpty()) {
-                    rebatePercentage = 0.0;
+                if (rebateValue.isEmpty()) {
+                    Toast.makeText(this, "Please enter a value for rebate", Toast.LENGTH_SHORT).show();
+                    return;
                 } else {
-                    rebatePercentage = Double.parseDouble(etRebate.getText().toString());
+                    rebatePercentage = Double.parseDouble(rebateValue);
                 }
 
                 if (rebatePercentage < 0 || rebatePercentage > 5) {
@@ -117,7 +119,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 FinalCharges.setText("Total charges: " + totalCharges + "\nRebate amount: " + rebateAmount + "\nFinal charges: " + finalCharges);
                 break;
-
         }
     }
 
@@ -132,7 +133,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         builder.setTitle("Calculator Description");
         builder.setMessage("This calculator helps you calculate the final charges based on the unit used and rebate percentage.\n\n" +
                 "1. Enter the unit used in kilowatt-hours (kWh) in the 'Unit Used' field.\n\n" +
-                "2. Enter the rebate percentage in the 'Rebate' field. For example, if the rebate is 10%, enter 10.\n\n" +
+                "2. Enter the rebate percentage in the 'Rebate' field. For example, the rebate percentage range is 0-5%, so enter 0 until 5 only.\n\n" +
                 "3. Click on the 'Calculate' button to calculate the final charges.\n\n" +
                 "4. Click on the 'Reset' button to clear the input fields.\n\n" +
                 "The calculated final charges will be displayed below the buttons.");

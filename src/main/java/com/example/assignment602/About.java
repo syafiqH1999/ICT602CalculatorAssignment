@@ -43,7 +43,7 @@ public class About extends AppCompatActivity {
     }
 
     public void openWebsite(View view) {
-        String url = "https://github.com";
+        String url = "https://github.com/syafiqH1999/ICT602CalculatorAssignment.git";
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse(url));
         startActivity(intent);

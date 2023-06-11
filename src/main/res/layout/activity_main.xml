@@ -6,13 +6,140 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Charges based on block"
+        android:layout_marginTop="35dp"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="20dp"
+        android:stretchColumns="*">
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/tvLabel1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Block" />
+
+            <TextView
+                android:id="@+id/tvLabel2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Charges (sen/kWh)" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/etValue1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:inputType="numberDecimal"
+                android:text="For the first 200 kWh (1-200 kWh)per month"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/etValue2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:text="21.8"
+                android:textSize="11sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/etValue3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:inputType="numberDecimal"
+                android:text="For the next 100 kWh (201-300 kWh)per month"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/etValue4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:text="33.4"
+                android:textSize="11sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/etValue5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:inputType="numberDecimal"
+                android:text="For the next 300 kWh (301-600 kWh)per month"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/etValue6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:text="51.6"
+                android:textSize="11sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/etValue7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:inputType="numberDecimal"
+                android:text="For the next 300 kWh (601-900 kWh)per month onwards"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/etValue8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:text="54.6"
+                android:textSize="11sp" />
+        </TableRow>
+    </TableLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:layout_below="@id/tableLayout"
         android:gravity="center"
+        android:orientation="vertical"
         android:paddingLeft="16dip"
         android:paddingRight="16dip">
+
 
         <EditText
             android:id="@+id/unitUsed"
@@ -65,7 +192,6 @@
             android:layout_gravity="center"
             android:src="@android:drawable/ic_menu_info_details"
             tools:srcCompat="@android:drawable/ic_menu_info_details" />
-
     </LinearLayout>
 
 </RelativeLayout>
